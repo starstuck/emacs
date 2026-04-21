@@ -4125,7 +4125,7 @@ whether it exists and if so, it is added to the environment
 variable PATH."
   (let ((command
 	 (format
-	  "PATH=%s && export PATH"
+	  "PATH=\"%s\" && export PATH"
 	  (string-join (tramp-get-remote-path vec) ":")))
 	(pipe-buf (tramp-get-remote-pipe-buf vec))
 	tmpfile chunk chunksize)
